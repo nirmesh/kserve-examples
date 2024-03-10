@@ -1,0 +1,17 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: "kserve-qa-bert-model"
+spec:
+  predictor:
+    containers:
+    - image: nirmesh44/kserve-qa-bert
+      resources:
+        requests:
+          memory: "4096Mi"
+          cpu: "250m"
+        limits:
+          memory: "4096Mi"
+          cpu: "500m"
