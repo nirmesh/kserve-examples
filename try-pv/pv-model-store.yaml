@@ -13,7 +13,7 @@ spec:
       command: [ "sleep" ]
       args: [ "infinity" ]
       volumeMounts:
-        - mountPath: "/pv"
+        - mountPath: "/mnt/models"
           name: model-store
       resources:
         limits:

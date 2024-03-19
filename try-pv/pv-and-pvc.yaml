@@ -5,20 +5,20 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
+  storageClassName: microk8s-host
   capacity:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/ubuntu/mnt/data"
+    path: "/mnt/models"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: task-pv-claim
 spec:
-  storageClassName: manual
+  storageClassName: microk8s-host
   accessModes:
     - ReadWriteOnce
   resources:
