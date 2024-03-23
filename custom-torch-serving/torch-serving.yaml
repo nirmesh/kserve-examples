@@ -1,0 +1,8 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: torch-from-uri-gzip
+spec:
+  predictor:
+    pytorch:
+      storageUri: http://10.118.169.62:7000/pytorch_artifacts.tar

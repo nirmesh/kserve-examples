@@ -1,0 +1,8 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: tensorflow-from-uri-gzip
+spec:
+  predictor:
+    tensorflow:
+      storageUri: http://10.118.169.62:7000/model_artifacts.tar.gz #https://raw.githubusercontent.com/tduffy000/kfserving-uri-examples/master/tensorflow/frozen/model_artifacts.tar
