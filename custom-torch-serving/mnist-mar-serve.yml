@@ -5,4 +5,4 @@ metadata:
 spec:
   predictor:
     pytorch:
-      storageUri: https://storage.cloud.google.com/dell-model-bucket/deploy-me # http://10.118.169.62:7000/deploy-me.tar.gz
+      storageUri: gs://dell-model-bucket/deploy-me # http://10.118.169.62:7000/deploy-me.tar.gz
